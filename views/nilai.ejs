@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>SIAKADWKWK</title>
+    <style>
+        .table {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero is-primary is-bold is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-three-fifths">
+                        <div class="box">
+                            <h1 class="title has-text-centered has-text-black">KHS</h1>
+                            <table class="table is-centered">
+                                <thead>
+                                    <tr>
+                                        <th>Kode</th>
+                                        <th>Nama</th>
+                                        <th>SKS</th>
+                                        <th>Kelas</th>
+                                        <th>Nilai</th>
+                                        <th>Huruf</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% data.forEach(function(d) { %>
+                                        <tr>
+                                            <th><%= d.kode_mata_kuliah %></th>
+                                            <th><%= d.nama_mata_kuliah %></th>
+                                            <th><%= d.sks %></th>
+                                            <th><%= d.kelas %></th>
+                                            <th><%= d.nilai_akhir %></th>
+                                            <th><%= d.nilai_huruf %></th>
+                                        </tr>
+                                    <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/b5b638f7ba.js" crossorigin="anonymous"></script>
+</body>
+</html>
